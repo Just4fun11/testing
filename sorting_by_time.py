@@ -16,3 +16,8 @@ for date, items in groupby(rows, key=itemgetter('date')):
     print(date)
     for i in items:
         print('~', i)
+
+'''
+The groupby() function works by scanning a sequence and finding sequential “runs” of identical values (or values returned by the given key function). On each iteration, it returns the value along with an iterator that produces all of the items in a group with the same value.
+An important preliminary step is sorting the data according to the field of interest. Since groupby() only examines consecutive items, failing to sort first won’t group the records as you want.
+'''
